@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css?family=Parisienne');
+
+body {
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #93CEE9;
+}
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+}
+/*FRONT PAGE*/
+.quote {
+    color: white;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+/*Button*/
+#next {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #045753;
+    padding: 1em;
+    font-weight: bold;
+}
+#nextPage {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+#next:hover {
+    background-color: #045753;
+    color: white; 
+}
+/*Moving background*/
+.wrap {
+    height: 100%;  
+    position: relative;
+    box-sizing: border-box;
+}
+
+    .bg {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: url('https://images.pexels.com/photos/386148/pexels-photo-386148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center;
+      background-size: cover;
+      transform: scale(1.1);
+    }
+/*Line under*/
+img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    position: relative;
+    top: -30px;
+}
+
+/*MAIN PAGE*/
+#header {
+    position: relative;
+    z-index: 101;
+    background-image: url("https://images.pexels.com/photos/156321/pexels-photo-156321.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-attachment: fixed;
+}
+.header {
+    position: relative;
+    color: white;
+    padding: 45px 30px;
+    line-height: 120px;
+    font-size: 90px;
+    text-align: center;
+    color: #FEFBF8;
+    font-family: 'Parisienne', cursive;
+}
+#or {
+    margin: auto;
+    width: 40px;
+    color: white;
+    font-weight: bold;
+}
+.content {
+    z-index: 100;
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.section {
+    position: relative;
+    top: -120px;
+    margin: 0 auto;
+    transition: background-color 2s;
+    justify-content: space-around;
+    width: 250px;
+}
+.section:hover {
+    /*background-image: linear-gradient( rgba(4, 92, 102, 0.075),rgba(2, 59, 65, 0.568)); */
+    background-clip: text;
+    background-color: rgba(7, 94, 110, 0.719);
+    box-shadow: 2px 10px 70px -2px rgba(0,0,0,1);
+}
+#bookList {
+    color: white;
+    text-align: center;
+}
+@media (min-width: 1030px) {
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 105;
+    }
+      
+    .sticky + .content {
+        padding-top: 60px;
+    }
+    .section {
+        position: relative;
+        top:0px;
+    }
+    .section {
+        width: 700px;
+        padding: 20px;
+    }
+    .section > button, .section > input {
+        display: inline;
+    }
+    .section {
+        justify-content: center;
+        text-align: center;
+    }
+    .section #keyDiv {
+        padding: 7px;
+        border: 1px solid white;
+        width: 208px;
+        text-align: center;
+        position: relative;
+        left: 5px;
+        top: 2px;
+    }
+    #keyButton, #keyDiv, #oldApiText, #oldApi {
+        display: block;
+    }
+    #oldApiText, #oldApi {
+        position: relative;
+        left: 450px;
+        top: -130px; 
+    }
+    .section #idSelect, .section #newTitle, .section #newAuthor, .section #changeBookButton {
+        margin-bottom: 10px;
+    }
+    #idSelect, #newTitle, #newAuthor, #changeBookButton {
+        display: block;
+        margin: auto;
+    }
+    #or {
+        font-size: 24px;
+        position: relative;
+        top: -60px;
+    }
+    /*OPTIONS BAR*/
+    #options > li {
+        position: relative;
+        z-index: 102;
+        display: inline;
+        padding: 15px;
+    }
+   
+    #options li:hover {
+        background-color: lightcoral;
+    }
+    #options {
+        border: 1px solid #ccc;
+        border-width: 1px 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align:center;
+        position: relative;
+        z-index: 103;
+        color: white;
+        background-color: #C67272;
+        padding: 14px 16px;
+    }
+    li > a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .header {
+        padding: 95px 30px;
+    }
+    section:hover {
+        box-shadow: 2px 10px 70px -2px rgba(0,0,0,1);
+    }
+    .section > select {
+        left: 0px;
+    }
+    #deleteButton {
+        background-color: #C67272;
+        color: white;
+        font-weight: bold;
+
+    }
+    #apiErrorSpan, #apiGoodSpan {
+        position: relative;
+        top: -100px;
+    }
+
+}
+ 
+.section+.section, .section:first-child {
+    margin-bottom: 10px;
+   }
+
+button, input {
+    display: block;
+    padding: 10px;
+    margin: 5px; 
+}
+input {
+    background-color: #FEFBF8;
+    width: 200px;
+}
+button {
+    cursor: pointer;
+    background-color: #C8CEDB;
+    width: 225px;
+}
+.line {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.line:before, .line:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid white;
+    margin: auto;
+}
+
+.errorSpan, .allGoodSpan {
+    padding: 5px;
+    font-style: italic;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    display: none;
+}
+.errorSpan {
+    background-color: rgb(247, 168, 159);
+}
+.allGoodSpan {
+    background-color: rgb(144, 224, 134);
+}
+
+
+select {
+    width: 225px;
+    padding: 12px;
+    background-color: #FEFBF8;
+    position: relative;
+    left: 5px;
+    box-shadow: 1px 0px 0px 1px grey inset;
+}
+
+.section > ul > li { 
+    list-style: none;
+    justify-content: left;
+    color: white;
+    padding-left: 5px;
+}
+.section > ul {
+    padding: 0px;
+}
+
+.section:last-child {
+    margin-bottom: 120px;
+}
+#keyDiv {
+    position: relative;
+    color: white;
+    left: 10px;
+}
+
+/*WAWES AT THE BOTTOM*/
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: url("https://images.pexels.com/photos/386148/pexels-photo-386148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: fixed;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project - Book store</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+        <div class="waveWrapper waveAnimation">
+                <div class="waveWrapperInner bgTop">
+                  <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+                </div>
+                <div class="waveWrapperInner bgMiddle">
+                  <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+                </div>
+                <div class="waveWrapperInner bgBottom">
+                  <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+                </div>
+        </div>
+        
+        <div id="header">
+            <header class="header">Holiday Reads</header>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAAeBAMAAAA839C8AAAAD1BMVEX///////////////////+Rd1MVAAAABXRSTlMAARogM0EyAsYAAACaSURBVGje7djLCYBAEATR0QgEE9iDCQhGsE7+MXkQQ6hDS3UEQ/PYz1RFZdnKcNlPOwDxXrd8Qbzd8gXxdsuXxCtfEu885AviHat8QbxV8gXxVsmXxCtfFK98WbxhfDsn4514DRo5qN75iTis13rT6o08HLzajA8zvxV+io0rHReSv+UrXpSveFG+4mX5ipfkK16Ur3hRvmF4H5Lth/5MSBJAAAAAAElFTkSuQmCC">
+        </div>
+    <div id="optionDiv">
+        <ul id="options">
+            <li><a href="#api">API key</a></li>
+            <li><a href="#add">Add a book</a></li>
+            <li><a href="#show">View Books</a></li>
+            <li><a href="#change">Change a book</a></li>
+            <li><a href="#del">Delete book</a></li>
+        </ul>
+    </div>
+
+
+    <div class="content">
+    
+        <div class="section">
+            <h2 class="line" id="api">API key</h2>
+            <div id="keyDiv">Choose a new Api key</div>
+            <button id="keyButton">Request a new API key</button> 
+            <div id="or">OR</div>
+            <input id="oldApiText" type="text" value="kRiWP" placeholder="Existing API key">
+            <button id="oldApi">Proceede with existing API key</button>
+            <span id="apiErrorSpan" class="errorSpan">Things didn't go as planned. Try again</span>
+            <span id="apiGoodSpan" class="allGoodSpan">Success!</span>
+        </div>
+        <div class="section">
+            <h2 class="line" id="add">Add a book</h2>
+            <input id="title" type="text" placeholder="Title">
+            <input id="author" type="text" placeholder="Author">
+            <button id="addBookButton">Add Book</button>
+            <span id="addBookErrorSpan" class="errorSpan">Things didn't go as planned. Try again</span>
+            <span id="addBookGoodSpan" class="allGoodSpan">Book has been added</span>
+        </div>
+        <div class="section">
+            <h2 class="line" id="show">View added books</h2>
+            <button id="viewBooksButton">View Books</button>
+            <ul id="bookList">
+            </ul>
+            <span id="viewBookErrorSpan" class="errorSpan">Things didn't go as planned. Try again</span>
+            <span id="viewBookGoodSpan" class="allGoodSpan">Here are your books!</span>
+        </div>
+        <div class="section">
+            <h2 class="line" id="change">Make some changes</h2>
+            <select id="idSelect" name="booksId">
+                <option value="book">Select book ID</option>;
+            </select>
+            <input id="newTitle" type="text" placeholder="Title">
+            <input id="newAuthor" type="text" placeholder="Author">
+            <button id="changeBookButton">Change Book</button>
+            <span id="changeBookErrorSpan" class="errorSpan">Things didn't go as planned. Try again</span>
+            <span id="changeBookGoodSpan" class="allGoodSpan">Book has been changed!</span>
+        </div>
+        <div class="section">
+            <h2 class="line" id="del">Delete a book</h2>
+            <select id="deleteIdSelect" name="booksId">
+				<option value="book">Select book ID</option>;
+            </select>
+            <button id="deleteButton">Delete Book</button>
+            <span id="deleteBookErrorSpan" class="errorSpan">Things didn't go as planned. Try again</span>
+            <span id="deleteBookGoodSpan" class="allGoodSpan">Book has been deleted</span>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
